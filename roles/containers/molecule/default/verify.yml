@@ -1,0 +1,14 @@
+---
+- name: Verify
+  hosts: all
+  become: true
+  tasks:
+    - name: Assert podman is installed
+      ansible.builtin.command: rpm -q podman
+      changed_when: false
+      # noqa: command-instead-of-module
+
+    - name: Assert podman-compose is installed
+      ansible.builtin.command: rpm -q podman-compose
+      changed_when: false
+      # noqa: command-instead-of-module

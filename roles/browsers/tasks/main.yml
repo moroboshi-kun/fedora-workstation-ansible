@@ -1,0 +1,19 @@
+---
+- name: Import Brave browser GPG key
+  ansible.builtin.rpm_key:
+    key: "{{ browsers_brave_gpg_key }}"
+    state: present
+
+- name: Add Brave browser repository
+  ansible.builtin.yum_repository:
+    name: brave-browser
+    description: Brave Browser
+    baseurl: "{{ browsers_brave_repo_baseurl }}"
+    gpgcheck: true
+    gpgkey: "{{ browsers_brave_gpg_key }}"
+    enabled: true
+
+- name: Install browsers and mail client
+  ansible.builtin.dnf:
+    name: "{{ browsers_packages }}"
+    state: present

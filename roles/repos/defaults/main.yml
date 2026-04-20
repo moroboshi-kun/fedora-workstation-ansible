@@ -1,0 +1,3 @@
+---
+repos_opentofu_gpgkey: "https://packages.opentofu.org/opentofu/tofu/gpgkey"
+repos_opentofu_baseurl: "https://packages.opentofu.org/opentofu/tofu/rpm_any/rpm_any/$basearch"

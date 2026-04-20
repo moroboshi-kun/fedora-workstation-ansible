@@ -1,0 +1,9 @@
+---
+- name: Add OpenTofu repository
+  ansible.builtin.yum_repository:
+    name: opentofu
+    description: OpenTofu
+    baseurl: "{{ repos_opentofu_baseurl }}"
+    gpgcheck: true
+    gpgkey: "{{ repos_opentofu_gpgkey }}"
+    enabled: true

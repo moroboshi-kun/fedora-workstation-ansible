@@ -1,0 +1,21 @@
+---
+- name: Install dev tools
+  ansible.builtin.dnf:
+    name: "{{ dev_tools_packages }}"
+    state: present
+
+- name: Install glab binary
+  ansible.builtin.unarchive:
+    src: "{{ dev_tools_glab_url }}"
+    dest: /tmp/glab_extract
+    remote_src: true
+    creates: "{{ dev_tools_glab_dest }}"
+
+- name: Copy glab to bin
+  ansible.builtin.copy:
+    src: /tmp/glab_extract/bin/glab
+    dest: "{{ dev_tools_glab_dest }}"
+    mode: "0755"
+    remote_src: true
+  args:
+    creates: "{{ dev_tools_glab_dest }}"

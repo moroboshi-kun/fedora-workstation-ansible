@@ -1,0 +1,5 @@
+---
+- name: Install container tools
+  ansible.builtin.dnf:
+    name: "{{ containers_packages }}"
+    state: present

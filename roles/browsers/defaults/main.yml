@@ -1,0 +1,6 @@
+---
+browsers_brave_gpg_key: "https://brave-browser-rpm-release.s3.brave.com/brave-core.asc"
+browsers_brave_repo_baseurl: "https://brave-browser-rpm-release.s3.brave.com/x86_64/"
+browsers_packages:
+  - brave-browser
+  - thunderbird

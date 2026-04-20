@@ -1,0 +1,25 @@
+---
+packages_list:
+  - htop
+  - iftop
+  - iotop
+  - sysstat
+  - autojump
+  - chrony
+  - dosfstools
+  - e2fsprogs
+  - firewalld
+  - git
+  - git-lfs
+  - gitui
+  - irqbalance
+  - kitty
+  - NetworkManager
+  - numactl
+  - os-prober
+  - python3-pipx
+  - ranger
+  - tig
+  - tree
+  - xfsprogs
+  - zsh

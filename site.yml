@@ -1,0 +1,32 @@
+---
+- name: Configure workstation
+  hosts: localhost
+  become: true
+  roles:
+    - role: packages
+      tags: packages
+    - role: repos
+      tags: repos
+    - role: dev_tools
+      tags: dev_tools
+    - role: containers
+      tags: containers
+    - role: kubernetes
+      tags: kubernetes
+    - role: browsers
+      tags: browsers
+
+- name: Deploy dotfiles
+  hosts: localhost
+  become: false
+  roles:
+    - role: fonts
+      tags: fonts
+    - role: dotfiles
+      tags: dotfiles
+    - role: ssh_keys
+      tags: ssh_keys
+    - role: nvm
+      tags: nvm
+    - role: powerline
+      tags: powerline

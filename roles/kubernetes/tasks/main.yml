@@ -1,0 +1,20 @@
+---
+- name: Add Kubernetes dnf repository
+  ansible.builtin.yum_repository:
+    name: "{{ kubernetes_kubectl_repo_name }}"
+    description: Kubernetes
+    baseurl: "{{ kubernetes_kubectl_repo_baseurl }}"
+    gpgcheck: true
+    gpgkey: "{{ kubernetes_kubectl_repo_gpgkey }}"
+    enabled: true
+
+- name: Install kubectl
+  ansible.builtin.dnf:
+    name: kubectl
+    state: present
+
+- name: Install minikube binary
+  ansible.builtin.get_url:
+    url: "{{ kubernetes_minikube_url }}"
+    dest: "{{ kubernetes_minikube_dest }}"
+    mode: "0755"
