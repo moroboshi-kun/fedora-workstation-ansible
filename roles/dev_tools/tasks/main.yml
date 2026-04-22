@@ -17,5 +17,3 @@
     dest: "{{ dev_tools_glab_dest }}"
     mode: "0755"
     remote_src: true
-  args:
-    creates: "{{ dev_tools_glab_dest }}"

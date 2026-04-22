@@ -31,3 +31,4 @@
   args:
     executable: /bin/bash
     creates: "{{ nvm_dir }}/versions/node/v{{ nvm_node_version }}"
+  changed_when: false
