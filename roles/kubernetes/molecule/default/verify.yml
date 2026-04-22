@@ -10,10 +10,10 @@
     - name: Assert minikube binary exists
       ansible.builtin.stat:
         path: /usr/local/bin/minikube
-      register: minikube_stat
+      register: kubernetes_minikube_stat
 
     - name: Assert minikube is present and executable
       ansible.builtin.assert:
         that:
-          - minikube_stat.stat.exists
-          - minikube_stat.stat.executable
+          - kubernetes_minikube_stat.stat.exists
+          - kubernetes_minikube_stat.stat.executable
