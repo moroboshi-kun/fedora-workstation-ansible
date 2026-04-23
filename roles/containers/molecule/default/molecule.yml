@@ -1,6 +1,6 @@
 ---
 driver:
-  name: "${MOLECULE_DRIVER:-docker}"
+  name: docker
 
 platforms:
   - name: fedora43
