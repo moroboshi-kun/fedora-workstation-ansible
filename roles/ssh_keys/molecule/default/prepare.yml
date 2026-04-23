@@ -4,6 +4,6 @@
   become: false
   gather_facts: false
   tasks:
-    - name: Install sudo and python3
-      ansible.builtin.raw: dnf install -y sudo python3
+    - name: Install sudo, python3, and openssh
+      ansible.builtin.raw: dnf install -y sudo python3 openssh
       changed_when: false
