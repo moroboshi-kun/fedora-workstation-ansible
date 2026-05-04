@@ -1,0 +1,16 @@
+---
+dev_tools_packages:
+  - ansible
+  - bison
+  - flex
+  - gcc
+  - gh
+  - golang
+  - kexec-tools
+  - make
+  - opentofu
+
+# Check for new releases: https://gitlab.com/gitlab-org/cli/-/releases
+dev_tools_glab_version: "2.57.0"
+dev_tools_glab_url: "https://gitlab.com/gitlab-org/cli/-/releases/v{{ dev_tools_glab_version }}/downloads/glab_{{ dev_tools_glab_version }}_linux_amd64.tar.gz"
+dev_tools_glab_dest: /usr/local/bin/glab

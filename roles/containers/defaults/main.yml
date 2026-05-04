@@ -1,4 +1,3 @@
 ---
-containers_packages:
-  - podman
-  - podman-compose
+# Variables are defined in vars/<version>.yml (or vars/default.yml as fallback).
+# See vars/ directory for version-specific values.

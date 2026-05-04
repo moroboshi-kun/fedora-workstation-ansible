@@ -1,6 +1,6 @@
 # fedora-workstation-ansible
 
-Ansible project for configuring a Fedora 43 workstation.
+Ansible project for configuring a Fedora workstation (43 and 44).
 
 ## Quick start (fresh machine)
 

@@ -1,4 +1,12 @@
 ---
+- name: Load version-specific variables
+  ansible.builtin.include_vars: "{{ item }}"
+  with_first_found:
+    - files:
+        - "{{ ansible_distribution_major_version }}.yml"
+        - default.yml
+      paths: "{{ role_path }}/vars"
+
 - name: Install packages
   ansible.builtin.dnf:
     name: "{{ packages_list }}"
