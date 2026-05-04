@@ -31,7 +31,7 @@ ansible-playbook site.yml --tags containers,kubernetes
 |---|---|
 | `packages` | Base system packages via dnf |
 | `dev_tools` | Development tools via dnf |
-| `containers` | Docker, docker-compose, docker group membership |
+| `containers` | Podman and podman-compose |
 | `kubernetes` | kubectl (via k8s repo) and minikube binary |
 | `browsers` | Brave browser repo + Thunderbird |
 | `fonts` | SauceCodePro Nerd Font |
